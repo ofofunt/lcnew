@@ -14,9 +14,15 @@
     <name>leetCodeTraining</name>
     <description>leetCodeTraining</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>8</java.version>
     </properties>
+
     <dependencies>
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.15.3</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -28,6 +34,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
 
     <build>
         <plugins>

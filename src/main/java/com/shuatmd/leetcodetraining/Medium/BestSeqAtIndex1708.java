@@ -76,5 +76,6 @@ public class BestSeqAtIndex1708 {
     public static void main(String[] args) {
         BestSeqAtIndex1708 test = new BestSeqAtIndex1708();
         test.bestSeqAtIndex(new int[]{2868,5485,1356,1306,6017,8941,7535,4941,6331,6181}, new int[]{5042,3995,7985,1651,5991,7036,9391,428,7561,8594});
+
     }
 }
