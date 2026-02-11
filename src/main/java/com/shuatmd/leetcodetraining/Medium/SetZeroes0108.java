@@ -1,6 +1,6 @@
 package com.shuatmd.leetcodetraining.Medium;
 
-import javafx.util.Pair;
+import cn.hutool.core.lang.Pair;
 
 import java.util.ArrayList;
 import java.util.HashSet;

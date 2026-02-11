@@ -1,6 +1,6 @@
 package com.shuatmd.leetcodetraining.Hard;
 
-import javafx.util.Pair;
+import cn.hutool.core.lang.Pair;
 
 import java.util.*;
 
