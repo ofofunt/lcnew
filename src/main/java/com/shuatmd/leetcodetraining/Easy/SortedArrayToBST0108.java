@@ -9,29 +9,20 @@ public class SortedArrayToBST0108 {
         SortedArrayToBST0108 test = new SortedArrayToBST0108();
         test.sortedArrayToBST(new int[]{-10,-3,0,5,9});
     }
+    //中序遍历保证升序
     public TreeNode sortedArrayToBST(int[] nums) {
-        int length = nums.length;
-        int rootVal = nums[length / 2];
-        TreeNode res = new TreeNode(rootVal);
-        int left = length / 2 - 1;
-        int right = length - 1;
-        TreeNode leftNode = res;
-        TreeNode rightNode = res;
-        while (left >= 0 || right > length / 2) {
-            while (left >= 0) {
-                leftNode.left = new TreeNode(nums[left]);
-                leftNode = leftNode.left;
-                left--;
-            }
-
-            rightNode.right = new TreeNode(nums[right]);
-            rightNode = rightNode.right;
-            while (right > length / 2) {
-                rightNode.left = new TreeNode(nums[right]);
-                rightNode = rightNode.left;
-                right--;
-            }
-        }
-        return res;
+        return helper(nums,0,nums.length -1);
     }
+
+    private TreeNode helper(int[] nums, int left, int right) {
+        if(left > right){
+            return null;
+        }
+        int mid = (left + right)/2;
+        TreeNode root = new TreeNode(nums[mid]);
+        root.left = helper(nums,left,mid-1);
+        root.right = helper(nums,mid+1,right);
+        return root;
+    }
+
 }
